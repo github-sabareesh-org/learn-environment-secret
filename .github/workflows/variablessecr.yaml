@@ -13,7 +13,10 @@ jobs:
         steps:
             - name: Runs only BOOLEAN_SECRET is true
               if: env.BOOLEAN_SECRET=='true'
-              run: echo "I ran"
+              run: |
+                echo "I ran"
+                echo "$BOOLEAN_SECRET"
+
             - name: Logs vars
               run: |
                echo '${{vars.JOBS_RUNNER}}'
