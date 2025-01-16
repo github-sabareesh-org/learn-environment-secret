@@ -4,6 +4,7 @@ on:
 jobs:
     logs-var:
         runs-on: ubuntu-latest
+        environment: prod
         env:
             BOOLEAN_SECRET: ${{secrets.BOOLEAN_SECRET}}           
             ENV_LEVEL_VAR: ${{vars.MY_ENV_VALUE}}
